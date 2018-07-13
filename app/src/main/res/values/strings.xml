@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Mis Pasteles</string>
+    <string name="login_acceder">Acceder</string>
+    <string name="login_signup">Registrarse</string>
+    <string name="login_password">Contraseña</string>
+    <string name="login_email">Email</string>
+    <string name="action_settings">Configuración</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>

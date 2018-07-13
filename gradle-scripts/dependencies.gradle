@@ -1,0 +1,66 @@
+ext {
+
+    //Version
+    supportVersion = '27.1.1'
+
+    circleImageVersion = '1.3.0'
+    butterknifeVersion = '8.8.1'
+
+    picassoVersion = '2.5.2'
+    daggerVersion = '2.16'
+
+    okhttpVersion = '3.10.0'
+    retrofitVersion = '2.4.0'
+    gsonVersion  = '2.4.0'
+
+    junitVersion = '4.12'
+
+    firebaseVersion= '15.0.0'
+
+    //Packages
+    supportPackage = 'com.android.support'
+
+    daggerPackage = 'com.google.dagger'
+    okhttpPackage = 'com.squareup.okhttp3'
+    picassoPackage = 'com.squareup.picasso'
+    retrofitPackage = 'com.squareup.retrofit2'
+    gsonPackage = 'com.squareup.retrofit2'
+
+    firebasePackage = 'com.google.firebase'
+
+    jakeWhartonPackage = 'com.jakewharton'
+    hdodenhofPackage = 'de.hdodenhof'
+
+    junitPackage = 'junit'
+
+    //Support Libraries dependencies
+    supportDependencies = [
+            design           : buildDependency(supportPackage, 'design', supportVersion),
+            appCompat        : buildDependency(supportPackage, 'appcompat-v7', supportVersion),
+            supportAnnotation: buildDependency(supportPackage, 'support-annotations', supportVersion)]
+
+    //Dagger Libraries dependencies
+    daggerDependencies = [
+            dagger           : buildDependency(daggerPackage, 'dagger', daggerVersion),
+            daggerCompiler   : buildDependency(daggerPackage, 'dagger-compiler', daggerVersion)]
+
+    //Elemental Libraries dependencies
+    circleImageView = buildDependency(hdodenhofPackage, 'circleimageview', circleImageVersion)
+    butterknife = buildDependency(jakeWhartonPackage, 'butterknife', butterknifeVersion)
+    butterknifeProcessor = buildDependency(jakeWhartonPackage, 'butterknife-compiler', butterknifeVersion)
+    okhttp = buildDependency(okhttpPackage, 'okhttp', okhttpVersion)
+    picasso = buildDependency(picassoPackage, 'picasso', picassoVersion)
+    gson = buildDependency(gsonPackage, 'converter-gson', gsonVersion)
+    retrofit = buildDependency(retrofitPackage, 'retrofit', retrofitVersion)
+    firebase = buildDependency(firebasePackage, 'firebase-auth', firebaseVersion)
+
+
+    //Testing
+    testingDependencies = [
+            junit      : buildDependency(junitPackage, 'junit', junitVersion)]
+
+}
+
+static String buildDependency(String pack, String dependency, String version) {
+    return "${pack}:${dependency}:${version}"
+}
